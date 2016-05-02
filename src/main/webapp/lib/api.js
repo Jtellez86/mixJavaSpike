@@ -9,7 +9,7 @@
 
     var Api = namespace.Api = function (baseUrl) {
         this.baseUrl = baseUrl ? baseUrl : ''; // should be undefined if not set;
-        this.getPath = this.baseUrl + "/api/data";
+        this.getPath = this.baseUrl + "data";
         this.postPath = '';
     }
 

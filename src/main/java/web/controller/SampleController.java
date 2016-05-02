@@ -1,16 +1,16 @@
 package web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.json.simple.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class SampleController {
 
-  @RequestMapping("hello/{name}")
-  public String loadHomePage(Model m, @PathVariable String name) {
-    m.addAttribute("name", name);
-    return "home";
+  @RequestMapping("/data")
+  public String loadHomePage() {
+    JSONObject object = new JSONObject();
+    object.put("value", "hello");
+    return object.toJSONString();
   }
 }

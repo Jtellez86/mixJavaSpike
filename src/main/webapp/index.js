@@ -9,7 +9,7 @@
     
     getRequestBtn.onclick = function() {
         api.get(null, function(rep) {
-            getRequestInput.value = rep.responseText;
+            getRequestInput.value = rep.data.value;
         });
     }
     
